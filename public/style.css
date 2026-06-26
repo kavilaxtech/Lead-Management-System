@@ -1,0 +1,426 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:30px auto;
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    color:#2563eb;
+    font-size:40px;
+    margin-bottom:8px;
+}
+
+header p{
+    color:#666;
+    font-size:16px;
+}
+
+/* ===========================
+DASHBOARD
+=========================== */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#777;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.card h2{
+    color:#2563eb;
+    font-size:32px;
+}
+
+/* ===========================
+FORM
+=========================== */
+
+.form-section{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.form-section h2{
+    margin-bottom:25px;
+    color:#2563eb;
+}
+
+#leadForm{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+#leadForm input,
+#leadForm select{
+
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+
+}
+
+#leadForm input:focus,
+#leadForm select:focus{
+
+    border-color:#2563eb;
+
+}
+
+#leadForm button{
+
+    grid-column:span 2;
+
+    background:#2563eb;
+    color:#fff;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#leadForm button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================
+SEARCH
+=========================== */
+
+.search-section{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+.search-section input{
+
+    flex:1;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.search-section input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+}
+
+.search-section select{
+
+    width:220px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+/* ===========================
+TABLE
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:12px;
+    overflow:hidden;
+}
+
+thead{
+    background:#2563eb;
+    color:#fff;
+}
+
+thead th{
+    padding:16px;
+    text-align:left;
+    font-weight:600;
+}
+
+tbody tr{
+    border-bottom:1px solid #eee;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#f8faff;
+}
+
+tbody td{
+    padding:15px;
+}
+
+tbody tr:last-child{
+    border-bottom:none;
+}
+
+/* ===========================
+STATUS BADGES
+=========================== */
+
+.status{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    display:inline-block;
+}
+
+.status.new{
+    background:#3b82f6;
+}
+
+.status.contacted{
+    background:#f59e0b;
+}
+
+.status.qualified{
+    background:#10b981;
+}
+
+.status.closed{
+    background:#6b7280;
+}
+
+/* ===========================
+ACTION BUTTONS
+=========================== */
+
+.action-btn{
+    border:none;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:8px;
+    transition:.3s;
+    font-size:14px;
+}
+
+.edit-btn{
+    background:#f59e0b;
+}
+
+.edit-btn:hover{
+    background:#d97706;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+/* ===========================
+MESSAGE BOX
+=========================== */
+
+.message{
+    margin-top:15px;
+    padding:12px;
+    border-radius:8px;
+    display:none;
+    font-weight:500;
+}
+
+.success{
+    background:#dcfce7;
+    color:#166534;
+    border:1px solid #86efac;
+}
+
+.error{
+    background:#fee2e2;
+    color:#991b1b;
+    border:1px solid #fca5a5;
+}
+
+/* ===========================
+SCROLLABLE TABLE
+=========================== */
+
+.table-container{
+    overflow-x:auto;
+    border-radius:12px;
+}
+
+/* ===========================
+UTILITY CLASSES
+=========================== */
+
+.hidden{
+    display:none;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    #leadForm{
+        grid-template-columns:1fr;
+    }
+
+    #leadForm button{
+        grid-column:span 1;
+    }
+
+    .search-section{
+        flex-direction:column;
+    }
+
+    .search-section select{
+        width:100%;
+    }
+
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    thead th,
+    tbody td{
+        padding:10px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .form-section{
+        padding:20px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    .action-btn{
+        display:block;
+        width:100%;
+        margin-bottom:8px;
+    }
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>LeadFlow</h1>
+
+            <p>Lead Management System</p>
+
+        </header>
+
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Leads</h3>
+                <h2 id="totalLeads">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>New</h3>
+                <h2 id="newLeads">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Contacted</h3>
+                <h2 id="contactedLeads">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Qualified</h3>
+                <h2 id="qualifiedLeads">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Closed</h3>
+                <h2 id="closedLeads">0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Form -->
+
+        <section class="form-section">
+
+            <h2>Add New Lead</h2>
+
+            <form id="leadForm">
+
+                <input type="hidden" id="leadId">
+
+                <input type="text" id="name" placeholder="Name" required>
+
+                <input type="text" id="company" placeholder="Company" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+
+                <select id="status">
+
+                    <option>New</option>
+                    <option>Contacted</option>
+                    <option>Qualified</option>
+                    <option>Closed</option>
+
+                </select>
+
+                <button type="submit">
+                    Save Lead
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <input type="text" id="searchInput" placeholder="Search by Name or Company">
+
+            <select id="filterStatus">
+
+                <option value="">All Status</option>
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Qualified">Qualified</option>
+                <option value="Closed">Closed</option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="leadTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
